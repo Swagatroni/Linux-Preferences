@@ -9,6 +9,7 @@ sudo apt upgrade
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+
 # Sublime-Text
 sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
 curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -43,6 +44,9 @@ sudo apt install trash-cli
 sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
 sudo chmod a+rx /usr/local/bin/unimatrix
 
-# Used to configure Powerlevel10k Theme
+
+# Clean-Up
+sudo dpkg -i ~/Linux-Preferences/lsd-musl_0.22.0_amd64.deb
+cd rm -rf Linux-Preferences
 p10k configure
 exec zsh
