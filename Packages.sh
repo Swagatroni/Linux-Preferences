@@ -10,3 +10,25 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 
+# Install Caffeine
+sudo apt -y install caffeine
+
+# Install Powerline
+sudo apt install --yes powerline
+
+# Install Python
+sudo apt install python3
+
+# Install Trash-CLI
+sudo apt install trash-cli
+
+# Install Sublime-Text
+sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt install sublime-text
+
+# Install Unimatrix
+sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
+sudo chmod a+rx /usr/local/bin/unimatrix
+
