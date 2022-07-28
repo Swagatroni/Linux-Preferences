@@ -38,3 +38,6 @@ sudo apt install sublime-text
 sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
 sudo chmod a+rx /usr/local/bin/unimatrix
 
+# Used to configure Powerlevel10k Theme
+p10k configure
+
