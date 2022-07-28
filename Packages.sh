@@ -1,9 +1,13 @@
 #!/bin/bash
-# Here are all the packages I usually install.
-
 # Here are the packages I usually install.
 
 cd
+
+# Installing ZSH
+sudo apt-get install zsh -y
+chsh -s /usr/bin/zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 sudo apt update
 sudo apt upgrade
 rm .zshrc
