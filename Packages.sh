@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Here are all the packages I usually install.
+
+
+sudo apt update
+sudo apt upgrade
+
 # Install Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
