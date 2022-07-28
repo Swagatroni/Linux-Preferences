@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Here are all the packages I usually install.
+# Here are the packages I usually install.
 
 
 sudo apt update
