@@ -3,6 +3,13 @@
 
 # Here are the packages I usually install.
 
+cd
+sudo apt update
+sudo apt upgrade
+rm .zshrc
+
+cd Linux-Preferences
+mv .zshrc ~/
 
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
