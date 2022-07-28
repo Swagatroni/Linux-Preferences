@@ -56,6 +56,7 @@ sudo chmod a+rx /usr/local/bin/unimatrix
 
 # Clean-Up
 sudo dpkg -i ~/Linux-Preferences/lsd-musl_0.22.0_amd64.deb
+mv Fonts/ ~/
 cd ~/
 rm -rf Linux-Preferences
 p10k configure
