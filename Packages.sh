@@ -62,3 +62,5 @@ cd ~/
 rm -rf Linux-Preferences
 p10k configure
 exec zsh
+
+# Thanks For Playing
