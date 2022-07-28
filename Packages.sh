@@ -1,7 +1,7 @@
 #!/bin/bash
 # Here are the packages I usually install.
 
-cd
+cd ~/
 
 # Installing ZSH
 sudo apt-get install zsh -y
@@ -13,7 +13,7 @@ sudo apt upgrade
 rm .zshrc
 
 cd Linux-Preferences
-mv .zshrc ~/
+mv .zshrc ~/ && cd ~/
 
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -56,7 +56,7 @@ sudo chmod a+rx /usr/local/bin/unimatrix
 
 # Clean-Up
 sudo dpkg -i ~/Linux-Preferences/lsd-musl_0.22.0_amd64.deb
-cd
-cd rm -rf Linux-Preferences
+cd ~/
+rm -rf Linux-Preferences
 p10k configure
 exec zsh
