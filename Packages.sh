@@ -46,6 +46,18 @@ sudo apt install --yes powerline
 # Python
 sudo apt install python3
 
+# Java
+sudo apt install java
+
+# Wget
+sudo apt-get install wget
+
+# Plank
+sudo apt install plank
+
+# Gnome
+$ sudo apt install gnome-session gdm3
+
 # Trash-CLI
 sudo apt install trash-cli
 
@@ -53,6 +65,14 @@ sudo apt install trash-cli
 sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
 sudo chmod a+rx /usr/local/bin/unimatrix
 
+# Ulauncher
+sudo apt update && sudo apt install -y gnupg
+gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
+gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg
+sudo echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
+          http://ppa.launchpad.net/agornostal/ulauncher/ubuntu focal main" \
+          > /etc/apt/sources.list.d/ulauncher-focal.list
+sudo apt update && sudo apt install ulauncher
 
 
 # Clean-Up
@@ -64,3 +84,6 @@ p10k configure
 exec zsh
 
 # Thanks For Playing
+# Other Things to Install
+  # lsd
+  # 
