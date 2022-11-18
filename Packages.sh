@@ -52,6 +52,12 @@ sudo apt install java
 # Wget
 sudo apt-get install wget
 
+# KDE Connect
+sudo apt-get install kdeconnect
+
+# Open SSHD
+sudo apt-get install openssh-server
+
 # Plank
 sudo apt install plank
 
