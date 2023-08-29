@@ -109,12 +109,46 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ansible="ssh ubuntu@ansible.shreveport-it.org"
-alias matrix="unimatrix -lk -bs 95 -c "
+alias canvas="xdg-open https://canvas.msstate.edu/"
+alias matrix="unimatrix -lk -bs 70 -c red"
 alias ls="lsd -Fl"
 alias la="lsd -Fla"
 alias trash="trash-put"
+alias server="ssh kenn@192.168.0.31"
+alias cls="clear"
+alias scan="sudo arp-scan -l"
+alias newer="
+    sudo apt update
+    sudo apt upgrade -y
+  "
+alias cleanup="
+    sudo apt autoclean -y
+    sudo apt autoremove -y
+  "
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export PATH=/usr/local/swift/usr/bin:$PATH
+export PATH=/usr/local/swift/usr/bin:$PATH
+export PATH=/usr/local/swift/usr/bin:$PATH
+export PATH=/opt/swift/usr/bin:/usr/local/swift/usr/bin:/usr/local/swift/usr/bin:/usr/local/swift/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+
+countdown() {
+    start="$(( $(date '+%s') + $1))"
+    while [ $start -ge $(date +%s) ]; do
+        time="$(( $start - $(date +%s) ))"
+        printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
+        sleep 0.1
+    done
+}
+
+stopwatch() {
+    start=$(date +%s)
+    while true; do
+        time="$(( $(date +%s) - $start))"
+        printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
+        sleep 0.1
+    done
+}
