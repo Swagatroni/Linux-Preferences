@@ -37,9 +37,6 @@ echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autos
 curl -fsSL https://download.opensuse.org/repositories/shells:zsh-users:zsh-autosuggestions/xUbuntu_21.10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_zsh-users_zsh-autosuggestions.gpg > /dev/null
 sudo apt install zsh-autosuggestions
 
-# Caffeine
-sudo apt -y install caffeine
-
 # Powerline
 sudo apt install --yes powerline
 
@@ -52,17 +49,11 @@ sudo apt install java
 # Wget
 sudo apt-get install wget
 
-# KDE Connect
-sudo apt-get install kdeconnect
-
 # Open SSHD
 sudo apt-get install openssh-server
 
 # Plank
 sudo apt install plank
-
-# Gnome
-$ sudo apt install gnome-session gdm3
 
 # Trash-CLI
 sudo apt install trash-cli
@@ -71,14 +62,10 @@ sudo apt install trash-cli
 sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
 sudo chmod a+rx /usr/local/bin/unimatrix
 
-# Ulauncher
-sudo apt update && sudo apt install -y gnupg
-gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
-gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg
-sudo echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
-          http://ppa.launchpad.net/agornostal/ulauncher/ubuntu focal main" \
-          > /etc/apt/sources.list.d/ulauncher-focal.list
-sudo apt update && sudo apt install ulauncher
+# mkusb
+sudo add-apt-repository ppa:mkusb/ppa
+sudo apt-get update
+sudo apt-get install mkusb mkusb-common dus guidus
 
 
 # Clean-Up
